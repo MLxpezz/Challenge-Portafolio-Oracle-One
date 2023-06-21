@@ -1,0 +1,143 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Lato', sans-serif;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+:root {
+    --azulMuyClaro: #5a9ac8;
+    --azulMenosClaro: #1c7abd;
+    --azulIntermedio: #15598a;
+    --azulMedioOscuro: #1c2f3d;
+    --azulOscuro: #09283d;
+}
+
+body {
+    background-color: #1C2F3D;
+    overflow-x: hidden;
+
+}
+
+                            /*NAV*/
+
+.menu {
+    width: 100vw;
+    height: 80px;
+    border-bottom: 1px solid var(--azulMenosClaro);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 20px;
+
+    position: relative;
+}
+
+.menu .menu__logo {
+    color: var(--azulMuyClaro);
+    font-size: 20px;
+    font-weight: 700;
+}
+
+.menu__links {
+    display: flex;
+    padding: 15px;
+    height: 100%;
+    width: 50%;
+    align-items: center;
+    justify-content: space-between;
+    list-style: none;
+}
+
+.menu__links li .menu__link__color {
+    text-decoration: none;
+    color: var(--azulMenosClaro);
+    font-size: 18px;
+    font-weight: 800;
+}
+
+.menu__links .menu__link__color:hover {
+    color: var(--azulMuyClaro);
+}
+
+/*MENU MOBILE*/
+
+.menu__mobile {
+    width: 100%;
+    position: absolute;
+    align-self: flex-start;
+    left: 0;
+    display: none;
+    overflow: hidden;
+}
+
+.menu__mobile .menu__mobile-img {
+    margin-bottom: 10px;
+    float: right;
+    padding: 0 30px;
+}
+
+.menu__mobile .menu__mobile-img:hover {
+    cursor: pointer;
+}
+
+.menu__mobile .menu__mobile-links {
+    width: 100vw;
+    height: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+    list-style: none;
+    background-color: transparent;
+    backdrop-filter: blur(5px);
+    z-index: 200;
+    position: relative;
+    overflow: hidden;
+
+    transition: all 0.9s;
+}
+
+.menu__mobile .menu__mobile-links .menu__link {
+    width: 100%;
+    text-align: center;
+    height: 150px;
+}
+
+.menu__mobile .menu__mobile-links .menu__link__color {
+    text-decoration: none;
+    color: var(--azulMuyClaro);
+    font-size: 50px;
+    font-weight: bold;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    backdrop-filter: blur(5px);
+}
+
+.menu__mobile .menu__mobile-links .menu__link__color:hover {
+    background-color: var(--azulMuyClaro);
+    backdrop-filter: blur(5px);
+    color: var(--azulIntermedio);
+}
+
+.show {
+    height: 96vh !important;
+}
+
+
+@media screen and (max-width: 950px) {
+    .menu__links {
+        display: none;
+    }
+
+    .menu__mobile {
+        display: block;
+    }
+}
