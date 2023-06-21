@@ -141,3 +141,23 @@ body {
         display: block;
     }
 }
+
+@media screen and (max-width: 912px) {
+    .menu .menu__logo {
+        font-size: 35px;
+    }
+
+    .menu__mobile .menu__mobile-img {
+        width: 100px;
+    }
+}
+
+@media screen and (max-width: 375px) {
+    .menu .menu__logo {
+        font-size: 20px;
+    }
+
+    .menu__mobile .menu__mobile-img {
+        width: 100px;
+    }
+}

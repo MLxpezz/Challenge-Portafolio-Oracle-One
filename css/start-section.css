@@ -132,18 +132,40 @@
 
 /*RESPONSIVE*/
 
+@media  screen and (max-width: 912px) {
+
+    .start .start__text-container .start__name,
+    .start .start__text-container .start__name__color {
+        font-size: 70px;
+    }
+
+    .start .start__profession {
+        font-size: 50px;
+    }
+
+    .start .start__links {
+        margin-right: 20px;
+    }
+
+    .start .start__github img {
+        width: 150px;
+    }
+
+    .start .start__linkedin img {
+        width: 120px;
+    }
+
+    .start .start__btn-cv {
+        width: 250px;
+        height: 100px;
+        font-size: 30px;
+    }
+}
+
 @media  screen and (max-width: 950px) {
 
     .start__img-container {
-        max-width: 400px;
-        width: 350px;
-        min-width: 200px;
-        position: absolute;
-        bottom: 0;
-    }
-
-    .start__img-container img{
-        width: 100%;
+        display: none;
     }
 
     .start .start__text-container .start__name,
@@ -152,6 +174,20 @@
     }
     .start .start__profession {
         font-size: 50px;
+    }
+
+    .start .start__btn-cv {
+        width: 200px;
+        height: 60px;
+        font-size: 25px;
+    }
+
+    .start .start__github img {
+        width: 90px;
+    }
+
+    .start .start__linkedin img {
+        width: 70px;
     }
 }
 
@@ -213,4 +249,50 @@
     .start .start__text-container {
         margin-right: 20px;
     }
+
+    .start .start__github img {
+        width: 100px;
+    }
+
+    .start .start__linkedin img {
+        width: 70px;
+    }
+
+    .start .start__btn-cv {
+        width: 200px;
+        height: 70px;
+        font-size: 25px;
+    }
 }
+
+
+@media  screen and (max-width: 375px) {
+
+    .start .start__text-container .start__name__color {
+        font-size: 40px;
+    }
+
+    .start .start__profession {
+        font-size: 25px;
+    }
+
+    .start .start__links {
+        margin-right: 20px;
+    }
+}
+
+@media  screen and (max-width: 414px) {
+
+    .start .start__text-container .start__name__color {
+        font-size: 40px;
+    }
+
+    .start .start__profession {
+        font-size: 25px;
+    }
+
+    .start .start__links {
+        margin-right: 20px;
+    }
+}
+
