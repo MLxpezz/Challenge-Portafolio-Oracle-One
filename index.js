@@ -82,7 +82,7 @@ document.addEventListener("DOMContentLoaded", () => {
     // Envía los datos a la API utilizando Fetch u otra técnica
     try {
       const response = await fetch(
-        "https://formsubmit.co/3f7e35919b7497e004f83989d9499588",
+        "https://formsubmit.co/ajax/3f7e35919b7497e004f83989d9499588",
         {
           method: "POST",
           body: formData,
