@@ -54,6 +54,15 @@
     flex-wrap: wrap;
 }
 
+.start .start__btn-cv a {
+    text-decoration: none;
+    color: var(--azulMuyClaro);
+}
+
+.start .start__btn-cv a:hover {
+    color: var(--azulMedioOscuro);
+}
+
 .start .start__btn-cv {
     padding: 10px;
     border-radius: 15px;
