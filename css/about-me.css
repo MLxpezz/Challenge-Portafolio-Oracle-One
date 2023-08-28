@@ -97,6 +97,9 @@
         font-size: 40px;
     }
 
+    .about-me .about-me__text-container .about-me__text{
+        font-size: 22px;
+    }
 
 
 }

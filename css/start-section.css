@@ -29,10 +29,6 @@
     font-size: 80px;
 }
 
-.start .start__img-container {
-    width: 50%;
-}
-
 .start .start__img-container .start__img {
     width: 100%;
     max-width: 600px;
@@ -197,6 +193,35 @@
     }
     .start .start__profession {
         font-size: 50px;
+    }
+
+    .start .start__btn-cv {
+        width: 200px;
+        height: 60px;
+        font-size: 25px;
+    }
+
+    .start .start__github img {
+        width: 90px;
+    }
+
+    .start .start__linkedin img {
+        width: 70px;
+    }
+}
+
+@media  screen and (max-width: 768px) {
+
+    .start__img-container {
+        display: none;
+    }
+
+    .start .start__text-container .start__name,
+    .start .start__text-container .start__name__color {
+        font-size: 45px;
+    }
+    .start .start__profession {
+        font-size: 40px;
     }
 
     .start .start__btn-cv {
