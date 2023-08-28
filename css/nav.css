@@ -19,14 +19,14 @@ html {
 
 body {
     background-color: #1C2F3D;
-    overflow-x: hidden;
+
 
 }
 
                             /*NAV*/
 
 .menu {
-    width: 100vw;
+    width: 100%;
     height: 80px;
     border-bottom: 1px solid var(--azulMenosClaro);
     display: flex;
@@ -86,7 +86,7 @@ body {
 }
 
 .menu__mobile .menu__mobile-links {
-    width: 100vw;
+    width: 100%;
     height: 0;
     display: flex;
     flex-direction: column;
@@ -143,9 +143,6 @@ body {
 }
 
 @media screen and (max-width: 912px) {
-    .menu .menu__logo {
-        font-size: 35px;
-    }
 
     .menu__mobile .menu__mobile-img {
         width: 100px;

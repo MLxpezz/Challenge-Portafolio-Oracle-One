@@ -1,6 +1,5 @@
 .skills {
-    width: 100vw;
-    min-height: 600px;
+    width: 100%;
     max-height: auto;
     display: flex;
     flex-wrap: wrap;
@@ -8,13 +7,14 @@
     justify-content: center;
     text-align: center;
     gap: 20px;
-    padding: 30px 0;
+    padding: 40px;
 }
 
 .skills .skills__title {
     width: 100%;
     font-size: 60px;
     color: var(--azulMuyClaro);
+    margin-top: 20px;
 }
 
 .skills .skill {
@@ -68,15 +68,6 @@
 
     .skills .skill {
         margin-right: 20px;
-    }
-}
-
-@media screen and (max-width: 912px){
-
-    .skills .skill {
-        width: 350px;
-        height: 350px;
-        font-size: 30px;
     }
 }
 
