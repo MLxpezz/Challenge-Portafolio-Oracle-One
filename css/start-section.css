@@ -5,7 +5,6 @@
     display: flex;
     align-items: center;
     justify-content: space-evenly;
- 
     padding: 0px 20px;
     position: relative;
 
@@ -30,10 +29,16 @@
     font-size: 80px;
 }
 
+.start .start__img-container {
+    width: 50%;
+}
+
 .start .start__img-container .start__img {
+    width: 100%;
     max-width: 600px;
     height: auto;
     min-width: 300px;
+    
 }
 
 .start .start__profession {
