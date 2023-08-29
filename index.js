@@ -1,78 +1,67 @@
 const $submit = document.getElementById("submit");
-const $name = document.getElementById("name");
 const $email = document.getElementById("email");
-const $subject = document.getElementById("subject");
-const $message = document.getElementById("textArea");
 const $menuMobileBtn = document.querySelector(".menu__mobile-img");
 const $menuMobile = document.querySelector(".menu__mobile-links");
 const $modal = document.querySelector(".contact__modal");
 
 //function
-const validateForm = () => {
-  const emailRegex =
-    /^([a-zA-Z0-9_,+-])+\@(([a-zA-Z0-9-])+\.)+([a-zA-Z0-9]{2,4})+$/;
-  const nameRegex = /^[A-Za-zÁ-ÿ\s']+$/;
+const validarEmail = (email) => {
+  return /^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$/.test(
+    email
+  );
+};
 
-  if ($name.value === "") {
-    alert("Debes ingresar tu nombre");
-    return false;
-  }
-  if ($email.value === "") {
-    alert("Debes ingresar tu email");
-    return false;
-  }
-  if ($subject.value === "") {
-    alert("Debes ingresar un asunto");
-    return false;
-  }
-  if ($message.value === "") {
-    alert("Debes ingresar un mensaje");
-    return false;
-  }
+const validaOk = (input) => {
+  const formControl = input.parentElement;
+  const aviso = formControl.querySelector(".input-message-error");
+  aviso.innerText = "";
+  formControl.classList.remove("falla");
+};
 
-  if (!nameRegex.test($name.value)) {
-    alert("El nombre solo puede contener letras");
-    $name.style.border = "1px solid red";
-    return false;
-  }
-  if (!emailRegex.test($email.value)) {
-    alert("Ingrese un formato de correo valido");
-    $email.style.border = "1px solid red";
-    return false;
-  }
-  if (!nameRegex.test($subject.value)) {
-    alert("el asunto solo puede contener letras");
-    $subject.style.border = "1px solid red";
-    return false;
-  }
-  if ($message.value.length > 300) {
-    alert("No pueden haber mas de 300 caracteres en el mensaje");
-    $message.style.border = "1px solid red";
-    return false;
-  }
-  if ($name.value.length > 50) {
-    alert("No pueden haber mas de 50 caracteres en el nombre");
-    $message.style.border = "1px solid red";
-    return false;
-  }
-  if ($subject.value.length > 50) {
-    alert("No pueden haber mas de 50 caracteres en el asunto");
-    $message.style.border = "1px solid red";
-    return false;
+const validaFalla = (input, msg) => {
+  const formControl = input.parentElement;
+  const aviso = formControl.querySelector(".input-message-error");
+  aviso.innerText = msg;
+
+  formControl.classList.add("falla");
+};
+
+const validarCampos = () => {
+  const inputs = document.querySelectorAll('[data-text]');
+  const emailValue = $email.value;
+  let camposValidos = true;
+
+  if (!emailValue) {
+    validaFalla($email, "El campo no puede estar vacio");
+    camposValidos = false;
+  } else if (!validarEmail(emailValue)) {
+    validaFalla($email, "Formato de email invalido");
+    camposValidos = false;
+  } else {
+    validaOk($email);
   }
 
-  return true;
+  inputs.forEach(input => {
+    const inputValue = input.value;
+    if(!inputValue) {
+      validaFalla(input, "El campo no puede estar vacio");
+      camposValidos = false;
+    } else{
+      validaOk(input);
+    }
+  })
+
+  return camposValidos;
 };
 
 //event
 document.addEventListener("DOMContentLoaded", () => {
   const $form = document.querySelector(".contact__form");
-  const submitButton = document.getElementById("submit");
 
   $form.addEventListener("submit", async (e) => {
     e.preventDefault();
 
-    if (!validateForm()) {
+    if (!validarCampos()) {
       return;
     }
 

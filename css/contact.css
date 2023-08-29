@@ -18,12 +18,19 @@
     gap: 30px;
 }
 
+.contact .contact__form .input-message-error {
+    color: red;
+
+}
+
+
 .contact .contact__title {
     font-size: 60px;
     color: var(--azulMuyClaro);
 }
 
-.contact .contact__form input {
+.contact .contact__form div input {
+    width: 100%;
     background-color: transparent;
     outline: none;
     border: none;
@@ -38,6 +45,7 @@
 }
 
 .contact .contact__form #textArea {
+    width: 100%;
     background-color: transparent;
     border: none;
     border-bottom: 1px solid var(--azulMuyClaro);
@@ -45,6 +53,12 @@
     outline: none;
     color: var(--azulMuyClaro);
     resize: none;
+}
+
+
+.contact .contact__form .falla input,
+.contact .contact__form .falla #textArea {
+    border: 1px solid red;
 }
 
 .contact .contact__form #textArea::placeholder {
