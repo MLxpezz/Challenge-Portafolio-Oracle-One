@@ -7,7 +7,7 @@
     justify-content: space-evenly;
     padding: 0px 20px;
     position: relative;
-
+    overflow-x: hidden;
     transition: all 1s;
 } 
 
